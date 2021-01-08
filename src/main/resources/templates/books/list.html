@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+    <p th:text="'Hello, ' + ${name} + '!'" />
+   <table >
+  <tr>
+    <th>BOOK TITLE</th>
+    <th>IS BN </th>
+    <th>PUBLISHER NAME </th>
+  </tr>
+  <tr th:each="book: ${books}">
+    <td th:text="${book.title}">Jill</td>
+    <td th:text="${book.isbn}">Smith</td>
+    <td th:text="${book.publisher.name}"></td>
+  </tr>
+</table>
+</body>
+</html>
